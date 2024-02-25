@@ -10,7 +10,20 @@
     <p>Armazene 15 números inteiros em um vetor e imprima uma mensagem contendo o número e uma das mensagens: par ou ímpar. </p>
 
     <?php 
-        
+        $array = [];
+
+        for ($i = 0; $i <15; $i ++){
+            array_push($array, rand(0,100));
+        }
+
+        foreach($array as $parImpar => $elem ) {
+            if ($elem % 2 == 0){
+                $parImpar = "par";
+            } else {
+                $parImpar = "impar";
+            }
+            echo $elem . " - ". $parImpar . "<br>";
+        };
     ?>
     
 </body>
