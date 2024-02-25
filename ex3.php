@@ -8,6 +8,7 @@
 <body>
     <h1>Exercício 3:</h1>
     <p>Armazene 15 números inteiros em um vetor e imprima uma mensagem contendo o número e uma das mensagens: par ou ímpar. </p>
+    <hr>
 
     <?php 
         $array = [];

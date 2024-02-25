@@ -8,6 +8,7 @@
 <body>
     <h1>Exercício 4:</h1>
     <p>Crie um vetor com 20 elementos inteiros. Imprima o maior e o menor, sem ordenar, o percentual de números pares e média dos elementos do vetor.</p>
+    <hr>
 
     <?php 
         $array = [];

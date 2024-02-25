@@ -8,6 +8,8 @@
 <body>
     <h1>Exercício 8:</h1>
     <p>Usando o método GET, crie um formulário que receba o nome do estudante, 3 notas de 0 a 10 e calcule a média quando um botão de submit for pressionado. Faça a validação dos campos de modo que usuário tenha que preencher todos eles e todos numéricos.</p>
+    <hr>
+    
     <?php 
         
     ?>

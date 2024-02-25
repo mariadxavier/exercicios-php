@@ -14,6 +14,8 @@
         <button type="submit">Verificar tempo</button>
     </form>
 
+    <hr>
+
     <?php 
         $massa = $_GET['massa'];
         $tempoEmSegundos = 0;
