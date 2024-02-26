@@ -10,7 +10,7 @@
     <p>Usando POST, crie um formulário que receba um login e senha de um usuário. Faça a validação dos campos de modo que o usuário tenha que preencher todos os campos. Se  o login for "etec" e a senha "informatica", exiba uma mensagem na tela de "logado com sucesso" e não exiba mais o formulário de login.</p>
     <hr>
 
-    <form action="ex9.php" method="post">
+    <form  action="ex9.php" method="post">
         <label for="login">Login:</label>
         <input type="text" name="login">
         
@@ -21,7 +21,17 @@
     </form>
 
     <?php 
-        
+    $login = $_POST['login'];
+    $senha = $_POST['senha'];
+
+    if (empty($login) || empty($senha)) {
+        echo '<h1>Preencha todos os campos!</h1>';
+    };
+
+    if ($login == "etec" && $senha == "informatica") {
+        echo "<h1>Logado com sucesso</h1>";
+        echo "<style> form { display: none;} </style>";
+    };
     ?>
     
 </body>
