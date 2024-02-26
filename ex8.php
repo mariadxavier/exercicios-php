@@ -13,23 +13,38 @@
     <form action="ex8.php" method="get">
         <label for="nome">Insira seu nome:</label>
         <input type="text" name="nome">
+        <br> <br>
 
         <label for="nota1">Primeira Nota:</label>
-        <input type="number" name="nota1" id="">
+        <input type="number" name="nota1" id="" min="0" max="10">
+        <br> <br>
 
         <label for="nota2">Segunda Nota:</label>
-        <input type="number" name="nota2" id="">
+        <input type="number" name="nota2" id=""  min="0" max="10">
+        <br> <br>
 
         <label for="nota3">Terceira Nota:</label>
-        <input type="number" name="nota3" id="">
+        <input type="number" name="nota3" id=""  min="0" max="10">
+        <br> <br>
 
-        <button type="submit"></button>
+        <button type="submit">Enviar</button>
     </form>
     
     <?php 
+    if (empty($nome) || empty($nota1 ) || empty($nota2) || empty($nota3)) {
+        echo '<h1>Preencha todos os campos!</h1>';
+    };
 
-    $NOME = $_GET['nome'];
-    echo $NOME;
+    $nome = $_GET['nome'];
+    $notas = ["nota 1" => $_GET['nota1'], "nota 2" => $_GET['nota2'],"nota 3" => $_GET['nota3']];
+    $nota = 0;
+    foreach($notas as $key => $value) {
+        $nota += $value;
+    };
+
+    $media = $nota / count($notas);
+    
+    echo "Média de $nome".": " . number_format($media, 1, '.', ',');
         
     ?>
     
