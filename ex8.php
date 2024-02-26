@@ -27,6 +27,9 @@
     </form>
     
     <?php 
+
+    $NOME = $_GET['nome'];
+    echo $NOME;
         
     ?>
     
